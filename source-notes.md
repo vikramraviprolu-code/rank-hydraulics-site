@@ -27,6 +27,7 @@ Additional pages fetched from the same GitHub Pages site:
 - Address used on the rebuilt pages: Bowdara road, Near Manorama Theatre, Visakhapatnam 530001.
 - Hours listed in source footer: Monday to Saturday, 9am to 7pm.
 - Referenced manufacturer and supplier lines: Mobil Lubricants, Parker, Gates, JK Fenner, Groz, AkzoNobel, Dulux and MannTek.
+- Manufacturer logos and representative product photos used in the rebuild were downloaded from the original Rank Hydraulics site asset paths such as `images/partner*.png`, `images/partner*.jpg`, `images/lubricants/`, `images/hoses/`, `images/powerbelts/`, `images/marinepaints/` and `images/valves/`.
 
 ## Items I Avoided Or Flagged
 

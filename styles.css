@@ -615,7 +615,7 @@ h3 {
 
 .brand-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.55fr) minmax(0, 0.45fr);
+  grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
   gap: var(--space-6);
   align-items: start;
 }
@@ -625,7 +625,7 @@ h3 {
   color: var(--color-white);
 }
 
-.brand-grid ul {
+.supplier-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1px;
@@ -636,10 +636,25 @@ h3 {
   border: 1px solid var(--color-white-16);
 }
 
-.brand-grid li {
+.supplier-grid li {
+  display: grid;
+  gap: var(--space-2);
   padding: var(--space-4);
   background: var(--color-white-07);
+}
+
+.supplier-grid strong {
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  line-height: 0.95;
+}
+
+.supplier-grid span {
+  color: var(--color-panel);
+  font-size: 0.88rem;
   font-weight: 700;
+  line-height: 1.4;
 }
 
 .contact-grid {
@@ -871,6 +886,42 @@ textarea:invalid:user-invalid {
   padding-bottom: var(--space-5);
 }
 
+.supplier-mini {
+  padding-block: var(--space-7);
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+
+.supplier-mini-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.52fr) minmax(0, 0.48fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.supplier-mini h2 {
+  max-width: 13ch;
+  color: var(--color-white);
+}
+
+.supplier-mini ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid var(--color-white-16);
+  background: var(--color-white-16);
+}
+
+.supplier-mini li {
+  padding: var(--space-4);
+  background: var(--color-white-07);
+  color: var(--color-white);
+  font-weight: 700;
+}
+
 .contact-strip {
   padding-block: var(--space-6);
   background: var(--color-accent-quiet);
@@ -911,7 +962,8 @@ textarea:invalid:user-invalid {
   .brand-grid,
   .contact-grid,
   .landing-hero-grid,
-  .proof-grid {
+  .proof-grid,
+  .supplier-mini-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1046,6 +1098,7 @@ textarea:invalid:user-invalid {
   }
 
   .brand-grid ul,
+  .supplier-mini ul,
   .category-band,
   .enquiry-form {
     grid-template-columns: 1fr;

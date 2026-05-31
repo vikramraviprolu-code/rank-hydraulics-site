@@ -18,15 +18,15 @@ Additional pages fetched from the same GitHub Pages site:
 - Establishment year: 1999.
 - Source-published stats: 600+ projects and 1100+ clients.
 - Core capability: registered manufacturer of high-pressure hydraulic hose assemblies.
-- Hose brands/capability stated by source: Parker and Gates hose assembly/manufacturing support.
+- Hose brands/capability stated by source: certified hose assembler for Parker and Gates hoses, plus end-to-end OEM hose connections.
 - Crimping capability stated by source: up to 4 inch hoses in India and up to 16 inch hoses in Dubai.
 - Branch/network locations stated by source: Kakinada, Hyderabad, Dubai and Frankfurt.
 - Services: hydraulic hose supply, power transmission belts, VMI, tools, lubricants, valves and related industrial supply.
-- Products: air hose, constant working pressure hose, coolant hose, fuel hose, high-pressure hose, hydraulic hose, oil hose, PTFE hose, synchronous belts, special belts, micro-V belts, V-belts, Mobil Delvac oil, gear oil, Mobil grease, industrial brass ball valves, cryogenic valves, 20,000 PSI ball valves, butterfly valves and marine paints.
+- Products: air hose, constant working pressure hose, coolant hose, fuel hose, high-pressure hose, hydraulic hose, oil hose, PTFE hose, synchronous belts, special belts, micro-V belts, V-belts, Mobil Super, Mobil Delvac, Mobil SHC, Mobil grease, gear oil, coolant/antifreeze, industrial brass ball valves, cryogenic valves, 20,000 PSI ball valves, butterfly valves and marine paints.
 - Project references: Polavaram irrigation, Mangampet mines, Vizag tunneling, Gujarat high-speed rail and VMI at Polavaram.
 - Address used on the rebuilt pages: Bowdara road, Near Manorama Theatre, Visakhapatnam 530001.
 - Hours listed in source footer: Monday to Saturday, 9am to 7pm.
-- Referenced brands: Mobil, Parker, Gates, AkzoNobel, JK Fenner, Groz, Dulux and MannTek.
+- Referenced manufacturer and supplier lines: Mobil Lubricants, Parker, Gates, JK Fenner, Groz, AkzoNobel, Dulux and MannTek.
 
 ## Items I Avoided Or Flagged
 

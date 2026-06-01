@@ -68,6 +68,10 @@
   --space-6: 2rem;
   --space-7: 3rem;
   --space-8: 4.5rem;
+  --section-y: clamp(2.75rem, 5.4vw, 4.5rem);
+  --section-y-compact: clamp(2.25rem, 4.4vw, 3.5rem);
+  --content-gap: clamp(1.25rem, 3.4vw, 3rem);
+  --layout-gap: clamp(1rem, 2.4vw, 2rem);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -310,15 +314,15 @@ h3 {
 
 h1 {
   max-width: 12ch;
-  font-size: 4.5rem;
+  font-size: clamp(3rem, 6.2vw, 4.5rem);
 }
 
 h2 {
-  font-size: 3.15rem;
+  font-size: clamp(2.15rem, 4vw, 3.15rem);
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: clamp(1.45rem, 2.1vw, 1.75rem);
 }
 
 .hero-copy,
@@ -419,13 +423,13 @@ h3 {
 .contact-section,
 .landing-proof,
 .landing-products {
-  padding-block: var(--space-8);
+  padding-block: var(--section-y);
 }
 
 .rail-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
-  gap: var(--space-7);
+  gap: var(--content-gap);
 }
 
 .section-kicker {
@@ -528,14 +532,19 @@ h3 {
 
 .split-heading {
   display: grid;
-  grid-template-columns: minmax(0, 0.4fr) minmax(0, 0.6fr);
-  gap: var(--space-6);
-  align-items: end;
-  margin-bottom: var(--space-6);
+  grid-template-columns: minmax(9rem, 0.26fr) minmax(0, 0.74fr);
+  gap: var(--layout-gap);
+  align-items: start;
+  margin-bottom: clamp(1.25rem, 2.8vw, 2.5rem);
 }
 
 .split-heading .eyebrow {
   margin-bottom: 0;
+  padding-top: 0.4rem;
+}
+
+.split-heading h2 {
+  max-width: 22ch;
 }
 
 .product-board {
@@ -610,7 +619,7 @@ h3 {
 .system-board {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-  gap: var(--space-4);
+  gap: var(--layout-gap);
   align-items: stretch;
 }
 
@@ -693,7 +702,7 @@ h3 {
 .operations-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: var(--space-7);
+  gap: var(--content-gap);
   align-items: center;
 }
 
@@ -717,7 +726,7 @@ h3 {
 .segment-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.44fr) minmax(0, 0.56fr);
-  gap: var(--space-7);
+  gap: var(--content-gap);
   align-items: start;
 }
 
@@ -756,7 +765,7 @@ h3 {
 .project-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  gap: var(--space-7);
+  gap: var(--content-gap);
   align-items: start;
 }
 
@@ -777,10 +786,14 @@ h3 {
   display: grid;
   gap: 1px;
   padding: 0;
-  margin: var(--space-6) 0 0;
+  margin: var(--space-5) 0 0;
   list-style: none;
   border: 1px solid var(--color-line);
   background: var(--color-line);
+}
+
+.project-copy h2 {
+  max-width: 18ch;
 }
 
 .project-list li {
@@ -796,8 +809,16 @@ h3 {
 .brand-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
-  gap: var(--space-6);
+  gap: var(--content-gap);
   align-items: start;
+}
+
+.brand-intro h2 {
+  max-width: 16ch;
+}
+
+.brand-intro p {
+  max-width: 52ch;
 }
 
 .brand-grid h2,
@@ -918,10 +939,31 @@ h3 {
   padding-left: var(--space-1);
 }
 
+@media (min-width: 981px) {
+  .product-section .split-heading {
+    grid-template-columns: minmax(8rem, 0.24fr) minmax(0, 0.76fr);
+  }
+
+  .project-layout {
+    grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+  }
+
+  .brand-grid {
+    grid-template-columns: minmax(0, 0.48fr) minmax(260px, 0.52fr);
+    align-items: end;
+  }
+
+  .brand-grid .manufacturer-strip {
+    justify-self: end;
+    max-width: 640px;
+    margin-top: 0;
+  }
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
-  gap: var(--space-7);
+  gap: var(--content-gap);
   align-items: start;
 }
 
@@ -1242,12 +1284,17 @@ textarea:invalid:user-invalid {
 }
 
 @media (max-width: 980px) {
+  :root {
+    --section-y: clamp(2.5rem, 6vw, 3.75rem);
+    --content-gap: clamp(1.25rem, 4vw, 2rem);
+  }
+
   h1 {
-    font-size: 3.55rem;
+    font-size: clamp(2.9rem, 8vw, 3.55rem);
   }
 
   h2 {
-    font-size: 2.45rem;
+    font-size: clamp(2rem, 5.8vw, 2.45rem);
   }
 
   .rail-grid,
@@ -1265,6 +1312,16 @@ textarea:invalid:user-invalid {
   .section-kicker,
   .project-photo {
     position: static;
+  }
+
+  .split-heading {
+    grid-template-columns: minmax(8rem, 0.34fr) minmax(0, 0.66fr);
+  }
+
+  .split-heading h2,
+  .project-copy h2,
+  .brand-intro h2 {
+    max-width: 22ch;
   }
 
   .product-board {
@@ -1339,6 +1396,12 @@ textarea:invalid:user-invalid {
 }
 
 @media (max-width: 760px) {
+  :root {
+    --section-y: clamp(2.25rem, 9vw, 3rem);
+    --content-gap: 1.35rem;
+    --layout-gap: 1rem;
+  }
+
   .site-header {
     grid-template-columns: auto auto;
     justify-content: space-between;
@@ -1416,7 +1479,7 @@ textarea:invalid:user-invalid {
   .contact-section,
   .landing-proof,
   .landing-products {
-    padding-block: var(--space-7);
+    padding-block: var(--section-y);
   }
 
   .rail-list article,
@@ -1428,6 +1491,10 @@ textarea:invalid:user-invalid {
 
   .split-heading {
     gap: var(--space-3);
+  }
+
+  .split-heading .eyebrow {
+    padding-top: 0;
   }
 
   .product-stack article {

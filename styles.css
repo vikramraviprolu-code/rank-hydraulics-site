@@ -148,7 +148,7 @@ button {
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: var(--space-5);
-  min-height: 76px;
+  min-height: 84px;
   padding: var(--space-3) max(var(--space-4), calc((100vw - 1180px) / 2));
   border-bottom: 1px solid var(--color-line);
   background: var(--color-paper-strong);
@@ -157,7 +157,7 @@ button {
 .brand {
   display: inline-grid;
   align-items: center;
-  width: 185px;
+  width: 226px;
   min-width: 0;
 }
 
@@ -263,6 +263,21 @@ button {
 .hero-inner {
   max-width: 850px;
   padding-block: var(--space-8);
+}
+
+.hero-rank-mark {
+  display: block;
+  width: clamp(250px, 27vw, 390px);
+  height: auto;
+  margin: 0 0 var(--space-4);
+  border: 1px solid oklch(100% 0 0 / 0.72);
+  border-radius: 999px;
+  background: var(--color-white);
+  box-shadow: 0 20px 48px oklch(13% 0.035 165 / 0.28);
+}
+
+.landing-rank-mark {
+  width: clamp(230px, 25vw, 340px);
 }
 
 .eyebrow {
@@ -1003,7 +1018,7 @@ textarea:invalid:user-invalid {
 }
 
 .site-footer img {
-  width: 180px;
+  width: 230px;
 }
 
 .site-footer nav {
@@ -1288,16 +1303,53 @@ textarea:invalid:user-invalid {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .site-header {
     grid-template-columns: auto auto;
     justify-content: space-between;
-    min-height: 68px;
+    min-height: 76px;
     padding-inline: var(--space-4);
   }
 
   .brand {
-    width: 158px;
+    width: 184px;
+  }
+
+  .nav-toggle {
+    display: grid;
+  }
+
+  .site-menu {
+    grid-column: 1 / -1;
+    display: none;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    gap: var(--space-2);
+    width: 100%;
+    padding-top: var(--space-2);
+  }
+
+  body.nav-open .site-menu {
+    display: flex;
+  }
+
+  .site-menu a {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    min-height: 74px;
+    padding-inline: var(--space-4);
+  }
+
+  .brand {
+    width: 176px;
   }
 
   .nav-toggle {

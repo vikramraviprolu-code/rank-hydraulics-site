@@ -55,7 +55,7 @@
   --color-ink-glass: oklch(18% 0.03 165 / 0.42);
   --color-transparent: transparent;
   --hero-home-image: linear-gradient(90deg, oklch(18% 0.03 165 / 0.86), oklch(18% 0.03 165 / 0.62), oklch(18% 0.03 165 / 0.10)), url("assets/polavaram-site.jpeg");
-  --hero-landing-image: linear-gradient(90deg, oklch(18% 0.03 165 / 0.9), oklch(18% 0.03 165 / 0.74), oklch(18% 0.03 165 / 0.36)), url("assets/hydraulic-hoses.jpg");
+  --hero-landing-image: linear-gradient(90deg, oklch(18% 0.03 165 / 0.9), oklch(18% 0.03 165 / 0.74), oklch(18% 0.03 165 / 0.36)), url("assets/2026-product-lines/hydraulic-hose-service.jpg");
   --shadow-soft: 0 24px 70px oklch(18% 0.03 165 / 0.14);
   --shadow-form: 0 22px 50px oklch(18% 0.03 165 / 0.20);
   --radius-sm: 6px;
@@ -400,6 +400,7 @@ h3 {
 .capability-rail,
 .product-section,
 .operations-section,
+.segment-section,
 .project-section,
 .brand-section,
 .contact-section,
@@ -423,6 +424,7 @@ h3 {
 .section-kicker h2,
 .split-heading h2,
 .operations-copy h2,
+.segment-layout h2,
 .project-copy h2,
 .brand-grid h2,
 .contact-copy h2,
@@ -458,6 +460,8 @@ h3 {
 .product-stack p,
 .product-feature p,
 .process-list p,
+.system-card p,
+.segment-layout p,
 .project-list p,
 .quote-checklist p,
 .category-band p,
@@ -549,6 +553,76 @@ h3 {
   align-self: start;
 }
 
+.system-board {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+.system-card {
+  display: grid;
+  grid-template-rows: 240px auto;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: var(--color-paper-strong);
+}
+
+.system-card-wide {
+  grid-row: span 2;
+  grid-template-rows: 430px auto;
+}
+
+.system-card > img,
+.system-gallery img {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  object-fit: cover;
+  background: var(--color-paper-strong);
+}
+
+.system-card-wide > img {
+  object-fit: cover;
+}
+
+.system-card > div:not(.system-gallery) {
+  padding: var(--space-5);
+}
+
+.system-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 240px;
+}
+
+.system-card-accent {
+  background: var(--color-accent-quiet);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: 0;
+  margin: var(--space-4) 0 0;
+  list-style: none;
+}
+
+.tag-list li {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  background: var(--color-panel);
+  color: var(--color-accent-dark);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
 .operations-section {
   background: var(--color-panel);
 }
@@ -571,6 +645,49 @@ h3 {
   gap: var(--space-5);
   padding-block: var(--space-5);
   border-top: 1px solid var(--color-line);
+}
+
+.segment-section {
+  background: var(--color-paper-strong);
+}
+
+.segment-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.44fr) minmax(0, 0.56fr);
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.segment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid var(--color-line);
+  background: var(--color-line);
+}
+
+.segment-grid li {
+  display: grid;
+  align-items: end;
+  min-height: 112px;
+  padding: var(--space-4);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 0.95;
+}
+
+.segment-grid li:nth-child(4n + 1) {
+  background: var(--color-accent-quiet);
+}
+
+.segment-grid li:nth-child(4n + 3) {
+  background: var(--color-panel);
 }
 
 .project-layout {
@@ -903,6 +1020,10 @@ textarea:invalid:user-invalid {
   grid-row: span 2;
 }
 
+.category-band article:nth-child(4) {
+  grid-column: 1 / -1;
+}
+
 .category-band img {
   height: 220px;
 }
@@ -944,7 +1065,7 @@ textarea:invalid:user-invalid {
 
 .supplier-mini-list {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1px;
   padding: 0;
   margin: 0;
@@ -1025,6 +1146,7 @@ textarea:invalid:user-invalid {
 
   .rail-grid,
   .operations-grid,
+  .segment-layout,
   .project-layout,
   .brand-grid,
   .contact-grid,
@@ -1041,6 +1163,18 @@ textarea:invalid:user-invalid {
 
   .product-board {
     grid-template-columns: 1fr;
+  }
+
+  .system-board {
+    grid-template-columns: 1fr;
+  }
+
+  .system-card-wide {
+    grid-row: auto;
+  }
+
+  .system-card-wide > img {
+    min-height: 280px;
   }
 
   .category-band {
@@ -1133,6 +1267,7 @@ textarea:invalid:user-invalid {
   .capability-rail,
   .product-section,
   .operations-section,
+  .segment-section,
   .project-section,
   .brand-section,
   .contact-section,
@@ -1167,8 +1302,13 @@ textarea:invalid:user-invalid {
   .brand-grid ul,
   .supplier-mini-list,
   .category-band,
+  .segment-grid,
   .enquiry-form {
     grid-template-columns: 1fr;
+  }
+
+  .segment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .form-row-wide,
@@ -1233,6 +1373,27 @@ textarea:invalid:user-invalid {
 
   .product-stack img {
     height: 180px;
+  }
+
+  .system-card,
+  .system-gallery {
+    grid-template-rows: auto;
+    min-height: auto;
+  }
+
+  .system-card > img,
+  .system-card-wide > img,
+  .system-gallery img {
+    height: 190px;
+    min-height: 190px;
+  }
+
+  .system-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .segment-grid {
+    grid-template-columns: 1fr;
   }
 
   .quote-checklist li {

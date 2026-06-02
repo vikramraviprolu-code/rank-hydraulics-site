@@ -208,6 +208,17 @@ button {
   color: var(--color-white);
 }
 
+.site-menu .nav-whatsapp {
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent-dark);
+}
+
+.site-menu .nav-whatsapp:hover,
+.site-menu .nav-whatsapp:focus-visible {
+  background: var(--color-accent-quiet);
+  color: var(--color-ink);
+}
+
 .site-menu .nav-cta:hover,
 .site-menu .nav-cta:focus-visible {
   background: var(--color-accent-dark);
@@ -380,6 +391,19 @@ h3 {
 .button-secondary:hover,
 .button-secondary:focus-visible {
   background: var(--color-paper-strong);
+  color: var(--color-ink);
+}
+
+.button-whatsapp {
+  border: 1px solid var(--color-accent-dark);
+  background: var(--color-accent-dark);
+  color: var(--color-white);
+}
+
+.button-whatsapp:hover,
+.button-whatsapp:focus-visible {
+  border-color: var(--color-accent);
+  background: var(--color-accent-quiet);
   color: var(--color-ink);
 }
 
@@ -1027,10 +1051,22 @@ address {
 }
 
 address a,
-.contact-strip a {
+.contact-strip p a {
   color: var(--color-accent-dark);
   font-weight: 700;
   white-space: nowrap;
+}
+
+.contact-actions,
+.contact-strip-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.contact-actions {
+  margin-top: var(--space-5);
 }
 
 .enquiry-form {
@@ -1633,6 +1669,11 @@ textarea:invalid:user-invalid {
   .hero-actions,
   .contact-strip-grid {
     align-items: stretch;
+  }
+
+  .contact-actions,
+  .contact-strip-actions {
+    width: 100%;
   }
 
   .button {

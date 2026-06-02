@@ -48,4 +48,4 @@ Additional pages fetched from the same GitHub Pages site:
   - `+91 88866 69999` in footers and contact cards.
 - The original source says "Since 25 Years", but also says established in 1999. The 2026 deck says "Since 1994" and "30+ years"; the site now uses the newer deck wording after user confirmation.
 - The source displays `99.5% Customer Satisfaction`; the rebuild does not use it because there is no supporting evidence in the source.
-- The source appointment form points to FormSubmit on the home page and a placeholder script URL on the contact page. The rebuild now posts public enquiry forms to FormSubmit at `sales@rankhydraulics.com`, with a branded `thanks.html` redirect and phone, email and WhatsApp fallbacks.
+- The source appointment form points to FormSubmit on the home page and a placeholder script URL on the contact page. The rebuild now posts public enquiry forms through the activated FormSubmit endpoint for `sales@rankhydraulics.com`, with a branded `thanks.html` redirect and phone, email and WhatsApp fallbacks.

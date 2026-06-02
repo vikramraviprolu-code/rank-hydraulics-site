@@ -3,6 +3,7 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const revealItems = document.querySelectorAll("[data-reveal]");
 const mailtoForms = document.querySelectorAll("[data-mail-form]");
 const submitForms = document.querySelectorAll("form[action^='https://formsubmit.co/']");
+const whatsappLinks = document.querySelectorAll("a[href^='https://wa.me/']");
 
 if (navToggle) {
   navToggle.addEventListener("click", () => {
@@ -36,6 +37,39 @@ submitForms.forEach((form) => {
   form.addEventListener("submit", () => {
     const status = form.querySelector("[data-form-status]");
     if (status) status.textContent = "Sending your enquiry to Rank Hydraulics.";
+  });
+});
+
+const isMobileDevice = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+let whatsappFallbackTimer;
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden && whatsappFallbackTimer) {
+    window.clearTimeout(whatsappFallbackTimer);
+  }
+});
+
+whatsappLinks.forEach((link) => {
+  if (!isMobileDevice) return;
+
+  link.addEventListener("click", (event) => {
+    const webUrl = new URL(link.href);
+    const phone = webUrl.pathname.replace(/\D/g, "");
+    const message = webUrl.searchParams.get("text") || "";
+
+    if (!phone) return;
+
+    event.preventDefault();
+
+    const appUrl = new URL("whatsapp://send");
+    appUrl.searchParams.set("phone", phone);
+    if (message) appUrl.searchParams.set("text", message);
+
+    whatsappFallbackTimer = window.setTimeout(() => {
+      if (!document.hidden) window.location.href = webUrl.href;
+    }, 900);
+
+    window.location.href = appUrl.href;
   });
 });
 

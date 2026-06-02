@@ -23,87 +23,114 @@
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@graph": [
-            {
-                  "@type": [
-                        "Organization",
-                        "LocalBusiness"
-                  ],
-                  "@id": "https://rankhydraulics.com/#organization",
-                  "name": "Rank Hydraulics",
-                  "url": "https://rankhydraulics.com/",
-                  "logo": "https://rankhydraulics.com/assets/logo.png",
-                  "image": "https://rankhydraulics.com/assets/og-rank-hydraulics.jpg",
-                  "foundingDate": "1994",
-                  "telephone": [
-                        "+91 98490 21685",
-                        "+91 8897 227766"
-                  ],
-                  "email": "sales@rankhydraulics.com",
-                  "address": [
-                        {
-                              "@type": "PostalAddress",
-                              "streetAddress": "32-1-81/A, Bowdara Road, Near Manorama",
-                              "addressLocality": "Visakhapatnam",
-                              "addressRegion": "Andhra Pradesh",
-                              "postalCode": "530001",
-                              "addressCountry": "IN"
-                        },
-                        {
-                              "@type": "PostalAddress",
-                              "streetAddress": "F-4, D-Block, behind BPCL Bunk, Autonagar",
-                              "addressLocality": "Visakhapatnam",
-                              "addressRegion": "Andhra Pradesh",
-                              "postalCode": "530012",
-                              "addressCountry": "IN"
+            "@context": "https://schema.org",
+            "@graph": [
+                  {
+                        "@type": [
+                              "Organization",
+                              "LocalBusiness"
+                        ],
+                        "@id": "https://rankhydraulics.com/#organization",
+                        "name": "Rank Hydraulics",
+                        "url": "https://rankhydraulics.com/",
+                        "logo": "https://rankhydraulics.com/assets/logo.png",
+                        "image": "https://rankhydraulics.com/assets/og-rank-hydraulics.jpg",
+                        "foundingDate": "1994",
+                        "telephone": [
+                              "+91 98490 21685",
+                              "+91 8897 227766"
+                        ],
+                        "email": "sales@rankhydraulics.com",
+                        "address": [
+                              {
+                                    "@type": "PostalAddress",
+                                    "streetAddress": "32-1-81/A, Bowdara Road, Near Manorama",
+                                    "addressLocality": "Visakhapatnam",
+                                    "addressRegion": "Andhra Pradesh",
+                                    "postalCode": "530001",
+                                    "addressCountry": "IN"
+                              },
+                              {
+                                    "@type": "PostalAddress",
+                                    "streetAddress": "F-4, D-Block, behind BPCL Bunk, Autonagar",
+                                    "addressLocality": "Visakhapatnam",
+                                    "addressRegion": "Andhra Pradesh",
+                                    "postalCode": "530012",
+                                    "addressCountry": "IN"
+                              }
+                        ],
+                        "areaServed": [
+                              "Visakhapatnam",
+                              "Andhra Pradesh",
+                              "India"
+                        ]
+                  },
+                  {
+                        "@type": "WebSite",
+                        "@id": "https://rankhydraulics.com/#website",
+                        "name": "Rank Hydraulics",
+                        "url": "https://rankhydraulics.com/",
+                        "publisher": {
+                              "@id": "https://rankhydraulics.com/#organization"
                         }
-                  ],
-                  "areaServed": [
-                        "Visakhapatnam",
-                        "Andhra Pradesh",
-                        "India"
-                  ]
-            },
-            {
-                  "@type": "WebSite",
-                  "@id": "https://rankhydraulics.com/#website",
-                  "name": "Rank Hydraulics",
-                  "url": "https://rankhydraulics.com/",
-                  "publisher": {
-                        "@id": "https://rankhydraulics.com/#organization"
-                  }
-            },
-            {
-                  "@type": "WebPage",
-                  "@id": "https://rankhydraulics.com/veedol-lubricants.html#webpage",
-                  "url": "https://rankhydraulics.com/veedol-lubricants.html",
-                  "name": "Veedol Lubricants, Oils & Greases | Rank Hydraulics",
-                  "description": "Veedol industrial oils, hydraulic oils, engine oils, gear oils, greases, coolants and specialty lubricants from Rank Hydraulics.",
-                  "isPartOf": {
-                        "@id": "https://rankhydraulics.com/#website"
                   },
-                  "about": {
-                        "@id": "https://rankhydraulics.com/#organization"
-                  }
-            },
-            {
-                  "@type": "Service",
-                  "@id": "https://rankhydraulics.com/veedol-lubricants.html#service",
-                  "name": "Veedol lubricant supply",
-                  "serviceType": "Veedol lubricant supply",
-                  "provider": {
-                        "@id": "https://rankhydraulics.com/#organization"
+                  {
+                        "@type": "WebPage",
+                        "@id": "https://rankhydraulics.com/veedol-lubricants.html#webpage",
+                        "url": "https://rankhydraulics.com/veedol-lubricants.html",
+                        "name": "Veedol Lubricants, Oils & Greases | Rank Hydraulics",
+                        "description": "Veedol industrial oils, hydraulic oils, engine oils, gear oils, greases, coolants and specialty lubricants from Rank Hydraulics.",
+                        "isPartOf": {
+                              "@id": "https://rankhydraulics.com/#website"
+                        },
+                        "about": {
+                              "@id": "https://rankhydraulics.com/#organization"
+                        },
+                        "breadcrumb": {
+                              "@id": "https://rankhydraulics.com/veedol-lubricants.html#breadcrumb"
+                        }
                   },
-                  "areaServed": [
-                        "Visakhapatnam",
-                        "Andhra Pradesh",
-                        "India"
-                  ],
-                  "url": "https://rankhydraulics.com/veedol-lubricants.html"
-            }
-      ]
-}
+                  {
+                        "@type": "Service",
+                        "@id": "https://rankhydraulics.com/veedol-lubricants.html#service",
+                        "name": "Veedol lubricant supply",
+                        "serviceType": "Veedol lubricant supply",
+                        "provider": {
+                              "@id": "https://rankhydraulics.com/#organization"
+                        },
+                        "areaServed": [
+                              "Visakhapatnam",
+                              "Andhra Pradesh",
+                              "India"
+                        ],
+                        "url": "https://rankhydraulics.com/veedol-lubricants.html"
+                  },
+                  {
+                        "@type": "BreadcrumbList",
+                        "@id": "https://rankhydraulics.com/veedol-lubricants.html#breadcrumb",
+                        "itemListElement": [
+                              {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Home",
+                                    "item": "https://rankhydraulics.com/"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Products",
+                                    "item": "https://rankhydraulics.com/products.html"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": "Veedol lubricants",
+                                    "item": "https://rankhydraulics.com/veedol-lubricants.html"
+                              }
+                        ]
+                  }
+            ]
+      }
     </script>
   </head>
   <body class="category-body">
@@ -127,6 +154,15 @@
     </header>
 
     <main class="category-page">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <div class="container">
+          <ol>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li aria-current="page">Veedol lubricants</li>
+          </ol>
+        </div>
+      </nav>
       <section class="category-hero" aria-labelledby="category-title">
         <div class="container category-hero-grid">
           <div class="category-hero-copy">

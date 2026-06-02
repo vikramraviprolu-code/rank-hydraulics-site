@@ -1231,6 +1231,55 @@ textarea:invalid:user-invalid {
   background: var(--color-paper);
 }
 
+.breadcrumb-nav {
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-paper-strong);
+}
+
+.breadcrumb-nav .container {
+  padding-block: var(--space-3);
+}
+
+.breadcrumb-nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  color: var(--color-ink-muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  list-style: none;
+}
+
+.breadcrumb-nav li {
+  display: inline-flex;
+  gap: var(--space-2);
+  align-items: center;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.breadcrumb-nav li + li::before {
+  flex: 0 0 auto;
+  color: var(--color-signal);
+  content: "/";
+}
+
+.breadcrumb-nav a {
+  color: var(--color-accent-dark);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 180ms var(--ease-out);
+}
+
+.breadcrumb-nav a:hover,
+.breadcrumb-nav a:focus-visible {
+  color: var(--color-ink);
+}
+
 .category-hero,
 .category-section,
 .related-section {
@@ -1506,6 +1555,41 @@ textarea:invalid:user-invalid {
 
 .product-page-card > img {
   min-height: 100%;
+}
+
+.buyer-questions {
+  border-top: 1px solid var(--color-line);
+  background: var(--color-paper);
+}
+
+.buyer-question-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: var(--color-line);
+}
+
+.buyer-question {
+  display: grid;
+  align-content: start;
+  min-width: 0;
+  padding: var(--space-5);
+  background: var(--color-paper-strong);
+}
+
+.buyer-question h3 {
+  max-width: 28ch;
+  margin: 0;
+  color: var(--color-ink);
+  font-size: clamp(1.25rem, 2.1vw, 1.75rem);
+}
+
+.buyer-question p {
+  margin: var(--space-3) 0 0;
+  color: var(--color-ink-muted);
 }
 
 .landing-body .site-header {
@@ -1979,6 +2063,7 @@ textarea:invalid:user-invalid {
   .category-band,
   .category-media-grid,
   .product-page-grid,
+  .buyer-question-grid,
   .segment-grid,
   .enquiry-form {
     grid-template-columns: 1fr;
@@ -2019,7 +2104,8 @@ textarea:invalid:user-invalid {
   .category-list li,
   .quote-detail-list li,
   .category-media-grid article > div,
-  .product-page-card > div {
+  .product-page-card > div,
+  .buyer-question {
     padding: var(--space-4);
   }
 

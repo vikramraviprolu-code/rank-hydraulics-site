@@ -23,87 +23,114 @@
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@graph": [
-            {
-                  "@type": [
-                        "Organization",
-                        "LocalBusiness"
-                  ],
-                  "@id": "https://rankhydraulics.com/#organization",
-                  "name": "Rank Hydraulics",
-                  "url": "https://rankhydraulics.com/",
-                  "logo": "https://rankhydraulics.com/assets/logo.png",
-                  "image": "https://rankhydraulics.com/assets/og-rank-hydraulics.jpg",
-                  "foundingDate": "1994",
-                  "telephone": [
-                        "+91 98490 21685",
-                        "+91 8897 227766"
-                  ],
-                  "email": "sales@rankhydraulics.com",
-                  "address": [
-                        {
-                              "@type": "PostalAddress",
-                              "streetAddress": "32-1-81/A, Bowdara Road, Near Manorama",
-                              "addressLocality": "Visakhapatnam",
-                              "addressRegion": "Andhra Pradesh",
-                              "postalCode": "530001",
-                              "addressCountry": "IN"
-                        },
-                        {
-                              "@type": "PostalAddress",
-                              "streetAddress": "F-4, D-Block, behind BPCL Bunk, Autonagar",
-                              "addressLocality": "Visakhapatnam",
-                              "addressRegion": "Andhra Pradesh",
-                              "postalCode": "530012",
-                              "addressCountry": "IN"
+            "@context": "https://schema.org",
+            "@graph": [
+                  {
+                        "@type": [
+                              "Organization",
+                              "LocalBusiness"
+                        ],
+                        "@id": "https://rankhydraulics.com/#organization",
+                        "name": "Rank Hydraulics",
+                        "url": "https://rankhydraulics.com/",
+                        "logo": "https://rankhydraulics.com/assets/logo.png",
+                        "image": "https://rankhydraulics.com/assets/og-rank-hydraulics.jpg",
+                        "foundingDate": "1994",
+                        "telephone": [
+                              "+91 98490 21685",
+                              "+91 8897 227766"
+                        ],
+                        "email": "sales@rankhydraulics.com",
+                        "address": [
+                              {
+                                    "@type": "PostalAddress",
+                                    "streetAddress": "32-1-81/A, Bowdara Road, Near Manorama",
+                                    "addressLocality": "Visakhapatnam",
+                                    "addressRegion": "Andhra Pradesh",
+                                    "postalCode": "530001",
+                                    "addressCountry": "IN"
+                              },
+                              {
+                                    "@type": "PostalAddress",
+                                    "streetAddress": "F-4, D-Block, behind BPCL Bunk, Autonagar",
+                                    "addressLocality": "Visakhapatnam",
+                                    "addressRegion": "Andhra Pradesh",
+                                    "postalCode": "530012",
+                                    "addressCountry": "IN"
+                              }
+                        ],
+                        "areaServed": [
+                              "Visakhapatnam",
+                              "Andhra Pradesh",
+                              "India"
+                        ]
+                  },
+                  {
+                        "@type": "WebSite",
+                        "@id": "https://rankhydraulics.com/#website",
+                        "name": "Rank Hydraulics",
+                        "url": "https://rankhydraulics.com/",
+                        "publisher": {
+                              "@id": "https://rankhydraulics.com/#organization"
                         }
-                  ],
-                  "areaServed": [
-                        "Visakhapatnam",
-                        "Andhra Pradesh",
-                        "India"
-                  ]
-            },
-            {
-                  "@type": "WebSite",
-                  "@id": "https://rankhydraulics.com/#website",
-                  "name": "Rank Hydraulics",
-                  "url": "https://rankhydraulics.com/",
-                  "publisher": {
-                        "@id": "https://rankhydraulics.com/#organization"
-                  }
-            },
-            {
-                  "@type": "WebPage",
-                  "@id": "https://rankhydraulics.com/groz-tools.html#webpage",
-                  "url": "https://rankhydraulics.com/groz-tools.html",
-                  "name": "Groz Tools, Grease Pumps & Oil Handling | Rank Hydraulics",
-                  "description": "Groz tools, grease pumps, oil handling equipment, impact tools, hand tools, work lights and storage references.",
-                  "isPartOf": {
-                        "@id": "https://rankhydraulics.com/#website"
                   },
-                  "about": {
-                        "@id": "https://rankhydraulics.com/#organization"
-                  }
-            },
-            {
-                  "@type": "Service",
-                  "@id": "https://rankhydraulics.com/groz-tools.html#service",
-                  "name": "Groz tool and maintenance equipment supply",
-                  "serviceType": "Groz tool and maintenance equipment supply",
-                  "provider": {
-                        "@id": "https://rankhydraulics.com/#organization"
+                  {
+                        "@type": "WebPage",
+                        "@id": "https://rankhydraulics.com/groz-tools.html#webpage",
+                        "url": "https://rankhydraulics.com/groz-tools.html",
+                        "name": "Groz Tools, Grease Pumps & Oil Handling | Rank Hydraulics",
+                        "description": "Groz tools, grease pumps, oil handling equipment, impact tools, hand tools, work lights and storage references.",
+                        "isPartOf": {
+                              "@id": "https://rankhydraulics.com/#website"
+                        },
+                        "about": {
+                              "@id": "https://rankhydraulics.com/#organization"
+                        },
+                        "breadcrumb": {
+                              "@id": "https://rankhydraulics.com/groz-tools.html#breadcrumb"
+                        }
                   },
-                  "areaServed": [
-                        "Visakhapatnam",
-                        "Andhra Pradesh",
-                        "India"
-                  ],
-                  "url": "https://rankhydraulics.com/groz-tools.html"
-            }
-      ]
-}
+                  {
+                        "@type": "Service",
+                        "@id": "https://rankhydraulics.com/groz-tools.html#service",
+                        "name": "Groz tool and maintenance equipment supply",
+                        "serviceType": "Groz tool and maintenance equipment supply",
+                        "provider": {
+                              "@id": "https://rankhydraulics.com/#organization"
+                        },
+                        "areaServed": [
+                              "Visakhapatnam",
+                              "Andhra Pradesh",
+                              "India"
+                        ],
+                        "url": "https://rankhydraulics.com/groz-tools.html"
+                  },
+                  {
+                        "@type": "BreadcrumbList",
+                        "@id": "https://rankhydraulics.com/groz-tools.html#breadcrumb",
+                        "itemListElement": [
+                              {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Home",
+                                    "item": "https://rankhydraulics.com/"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Products",
+                                    "item": "https://rankhydraulics.com/products.html"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": "Groz tools",
+                                    "item": "https://rankhydraulics.com/groz-tools.html"
+                              }
+                        ]
+                  }
+            ]
+      }
     </script>
   </head>
   <body class="category-body">
@@ -127,6 +154,15 @@
     </header>
 
     <main class="category-page">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <div class="container">
+          <ol>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li aria-current="page">Groz tools</li>
+          </ol>
+        </div>
+      </nav>
       <section class="category-hero" aria-labelledby="category-title">
         <div class="container category-hero-grid">
           <div class="category-hero-copy">

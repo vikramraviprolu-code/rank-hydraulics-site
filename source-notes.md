@@ -36,6 +36,7 @@ Additional pages fetched from the same GitHub Pages site:
 - Manufacturer logos and representative product photos used in the rebuild were downloaded from the original Rank Hydraulics site asset paths such as `images/partner*.png`, `images/partner*.jpg`, `images/lubricants/`, `images/hoses/`, `images/powerbelts/`, `images/marinepaints/` and `images/valves/`.
 - The 2026 update also uses optimized product and logo images extracted from the provided PowerPoint deck, stored under `assets/2026-brand-logos/` and `assets/2026-product-lines/`.
 - The SEO product-page expansion added dedicated static pages for hydraulic hose assemblies, Stauff components, power transmission, Groz tools, Veedol lubricants, coatings/welding and project/VMI supply. These pages use existing source/deck facts and representative product images only; client-supplied project proof and authorization documents are still pending.
+- The latest technical SEO pass adds visible breadcrumbs and `BreadcrumbList` structured data to the product hub and product-detail pages. Buyer-question content is published as visible page copy only; `FAQPage` structured data was intentionally not added because Google Search Central says FAQ rich results are being deprecated and are limited to authoritative government-focused or health-focused sites.
 
 ## Items I Avoided Or Flagged
 

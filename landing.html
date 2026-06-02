@@ -100,8 +100,8 @@
             <h1 id="landing-title">Send the right product requirement to the right desk.</h1>
             <p>
               Send hydraulic hose, Stauff component, belt, coupling, chain, Veedol lubricant, Groz tool,
-              coating, welding or VMI requirements with the machine context. The static form opens an
-              email draft with the useful details already structured.
+              coating, welding or VMI requirements with the machine context. The form sends the
+              useful details directly to the Rank Hydraulics sales desk.
             </p>
             <div class="landing-badges" aria-label="Key source facts">
               <span>Since 1994</span>
@@ -109,7 +109,13 @@
               <span>12 industry segments</span>
             </div>
           </div>
-          <form class="enquiry-form quote-form" id="quote" data-mail-form data-mailto="sales@rankhydraulics.com">
+          <form class="enquiry-form quote-form" id="quote" action="https://formsubmit.co/sales@rankhydraulics.com" method="POST">
+            <input type="hidden" name="_subject" value="Rank Hydraulics quote request">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://rankhydraulics.com/thanks.html">
+            <input type="hidden" name="source_page" value="Quote landing page">
+            <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off">
             <p class="form-title">Request a quote</p>
             <div class="form-row">
               <label for="quote-name">Name</label>
@@ -141,7 +147,7 @@
               <textarea id="quote-message" name="message" rows="5" required></textarea>
             </div>
             <p class="form-status" data-form-status aria-live="polite"></p>
-            <button class="button button-primary" type="submit">Prepare email</button>
+            <button class="button button-primary" type="submit">Send quote request</button>
           </form>
         </div>
       </section>
@@ -287,7 +293,7 @@
           <a href="https://wa.me/919849021685?text=Hello%20Rank%20Hydraulics%2C%20I%20would%20like%20to%20send%20an%20industrial%20supply%20requirement." target="_blank" rel="noopener">WhatsApp sales</a>
         </nav>
         <p class="fine-print">
-          This page is static. Form submission opens the visitor's email client and does not store enquiry data.
+          This static page sends form submissions to the Rank Hydraulics sales desk through a lightweight form endpoint.
         </p>
       </div>
     </footer>

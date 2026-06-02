@@ -1104,6 +1104,10 @@ address a,
   gap: var(--space-2);
 }
 
+.form-honeypot {
+  display: none;
+}
+
 .form-row-wide,
 .form-status,
 .enquiry-form .button {
@@ -1175,6 +1179,48 @@ textarea:invalid:user-invalid {
 
 .fine-print {
   font-size: 0.86rem;
+}
+
+.thanks-main {
+  display: grid;
+  align-items: center;
+  min-height: clamp(560px, 72dvh, 760px);
+  padding-block: var(--section-y);
+}
+
+.thanks-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 0.58fr);
+  gap: var(--content-gap);
+  align-items: end;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: var(--color-paper-strong);
+  box-shadow: var(--shadow-soft);
+}
+
+.thanks-panel h1 {
+  max-width: 13ch;
+}
+
+.thanks-panel p {
+  max-width: 62ch;
+  color: var(--color-ink-muted);
+}
+
+.thanks-card {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+
+.thanks-card p {
+  margin: 0;
+  color: var(--color-white);
 }
 
 .category-body {
@@ -1697,6 +1743,7 @@ textarea:invalid:user-invalid {
   .category-quote-grid,
   .category-cta-grid,
   .related-grid,
+  .thanks-panel,
   .landing-hero-grid,
   .proof-grid,
   .supplier-mini-grid {
@@ -1711,7 +1758,8 @@ textarea:invalid:user-invalid {
   .category-hero-copy h1,
   .category-panel h2,
   .category-quote-grid h2,
-  .category-cta h2 {
+  .category-cta h2,
+  .thanks-panel h1 {
     max-width: 20ch;
   }
 
@@ -1893,6 +1941,7 @@ textarea:invalid:user-invalid {
   .category-hero,
   .category-section,
   .related-section,
+  .thanks-main,
   .landing-proof,
   .landing-products {
     padding-block: var(--section-y);

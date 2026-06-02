@@ -1,7 +1,8 @@
 const body = document.body;
 const navToggle = document.querySelector("[data-nav-toggle]");
 const revealItems = document.querySelectorAll("[data-reveal]");
-const forms = document.querySelectorAll("[data-mail-form]");
+const mailtoForms = document.querySelectorAll("[data-mail-form]");
+const submitForms = document.querySelectorAll("form[action^='https://formsubmit.co/']");
 
 if (navToggle) {
   navToggle.addEventListener("click", () => {
@@ -31,7 +32,14 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
 
-forms.forEach((form) => {
+submitForms.forEach((form) => {
+  form.addEventListener("submit", () => {
+    const status = form.querySelector("[data-form-status]");
+    if (status) status.textContent = "Sending your enquiry to Rank Hydraulics.";
+  });
+});
+
+mailtoForms.forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const status = form.querySelector("[data-form-status]");

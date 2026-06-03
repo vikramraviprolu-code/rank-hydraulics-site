@@ -4,6 +4,8 @@ Source reviewed: https://suryaprakashbear.github.io/rankhydraulics.github.io/ind
 
 Latest content source reviewed: `/Users/vraviprolu/Downloads/RankHydraulics-Products2026.pptx`
 
+Customer logo source reviewed: `/Users/vraviprolu/Library/Containers/net.whatsapp.WhatsApp/Data/tmp/documents/C8C15CCF-741E-4145-B74A-3314BCCA0980/companies.docx`
+
 Additional pages fetched from the same GitHub Pages site:
 
 - `aboutus.html`
@@ -35,6 +37,7 @@ Additional pages fetched from the same GitHub Pages site:
 - Contact details from the 2026 deck: `sales@rankhydraulics.com`, `+91 98490 21685`, `+91 8897 227766`, `32-1-81/A, Bowdara Road, Near Manorama, Visakhapatnam 530001` and `F-4, D-Block, behind BPCL Bunk, Autonagar, Visakhapatnam 530012`.
 - Manufacturer logos and representative product photos used in the rebuild were downloaded from the original Rank Hydraulics site asset paths such as `images/partner*.png`, `images/partner*.jpg`, `images/lubricants/`, `images/hoses/`, `images/powerbelts/`, `images/marinepaints/` and `images/valves/`.
 - The 2026 update also uses optimized product and logo images extracted from the provided PowerPoint deck, stored under `assets/2026-brand-logos/` and `assets/2026-product-lines/`.
+- Approved customer logos from the provided `companies.docx` file were extracted to `assets/customer-logos/` after user confirmation that they can be published.
 - The SEO product-page expansion added dedicated static pages for hydraulic hose assemblies, Stauff components, power transmission, Groz tools, Veedol lubricants, coatings/welding and project/VMI supply. These pages use existing source/deck facts and representative product images only; client-supplied project proof and authorization documents are still pending.
 - The latest technical SEO pass adds visible breadcrumbs and `BreadcrumbList` structured data to the product hub and product-detail pages. Buyer-question content is published as visible page copy only; `FAQPage` structured data was intentionally not added because Google Search Central says FAQ rich results are being deprecated and are limited to authoritative government-focused or health-focused sites.
 

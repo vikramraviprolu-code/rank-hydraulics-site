@@ -27,6 +27,21 @@ function localPathFromUrl(value) {
   return value.split("#")[0].split("?")[0];
 }
 
+function attributeValue(tag, name) {
+  const match = tag.match(new RegExp(`\\b${name}=["']([^"']+)["']`, "i"));
+  return match ? match[1] : "";
+}
+
+function hasHiddenInput(formHtml, name) {
+  for (const inputMatch of formHtml.matchAll(/<input\b[^>]*>/gi)) {
+    const input = inputMatch[0];
+    if (attributeValue(input, "name") === name && attributeValue(input, "type").toLowerCase() === "hidden") {
+      return true;
+    }
+  }
+  return false;
+}
+
 for (const file of htmlFiles) {
   const html = read(file);
   const editorialMarkers = ["T" + "BD", "TO" + "DO", "lorem ipsum"];
@@ -73,8 +88,8 @@ for (const file of htmlFiles) {
     const formStart = formMatch.index || 0;
     const formEnd = html.indexOf("</form>", formStart);
     const formHtml = html.slice(formStart, formEnd > formStart ? formEnd : html.length);
-    if (!formHtml.includes('name="_next"')) fail(`${file}: FormSubmit form missing _next hidden field`);
-    if (!formHtml.includes('name="_subject"')) fail(`${file}: FormSubmit form missing _subject hidden field`);
+    if (!hasHiddenInput(formHtml, "_next")) fail(`${file}: FormSubmit form missing _next hidden field`);
+    if (!hasHiddenInput(formHtml, "_subject")) fail(`${file}: FormSubmit form missing _subject hidden field`);
   }
 }
 

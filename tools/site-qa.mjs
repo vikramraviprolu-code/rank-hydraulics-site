@@ -21,10 +21,11 @@ function read(file) {
 }
 
 function localPathFromUrl(value) {
+  let path = value;
   if (value.startsWith("https://rankhydraulics.com/")) {
-    return value.replace("https://rankhydraulics.com/", "");
+    path = value.replace("https://rankhydraulics.com/", "");
   }
-  return value.split("#")[0].split("?")[0];
+  return path.split("#")[0].split("?")[0];
 }
 
 function attributeValue(tag, name) {
@@ -65,7 +66,7 @@ for (const file of htmlFiles) {
       continue;
     }
 
-    if (value.startsWith("http://") || value.startsWith("https://")) {
+    if ((value.startsWith("http://") || value.startsWith("https://")) && !value.startsWith("https://rankhydraulics.com/")) {
       continue;
     }
 
@@ -83,7 +84,7 @@ for (const file of htmlFiles) {
     }
   }
 
-  const formsubmitForms = [...html.matchAll(/<form\b[^>]*action=["']https:\/\/formsubmit\.co\/[^"']+["'][^>]*>/g)];
+  const formsubmitForms = [...html.matchAll(/<form\b[^>]*\baction\s*=\s*["']https:\/\/formsubmit\.co\/[^"']+["'][^>]*>/g)];
   for (const formMatch of formsubmitForms) {
     const formStart = formMatch.index || 0;
     const formEnd = html.indexOf("</form>", formStart);

@@ -55,7 +55,7 @@
   --color-ink-glass: oklch(18% 0.03 165 / 0.42);
   --color-transparent: transparent;
   --hero-home-image: linear-gradient(90deg, oklch(18% 0.03 165 / 0.86), oklch(18% 0.03 165 / 0.62), oklch(18% 0.03 165 / 0.10)), url("assets/polavaram-site.jpeg");
-  --hero-landing-image: linear-gradient(90deg, oklch(18% 0.03 165 / 0.9), oklch(18% 0.03 165 / 0.74), oklch(18% 0.03 165 / 0.36)), url("assets/2026-product-lines/hydraulic-hose-service.jpg");
+  --hero-landing-image: linear-gradient(90deg, oklch(18% 0.03 165 / 0.9), oklch(18% 0.03 165 / 0.74), oklch(18% 0.03 165 / 0.36)), url("assets/2026-product-lines-clean/hydraulic-hose-service.jpg");
   --shadow-soft: 0 24px 70px oklch(18% 0.03 165 / 0.14);
   --shadow-form: 0 22px 50px oklch(18% 0.03 165 / 0.20);
   --radius-sm: 6px;
@@ -729,6 +729,22 @@ h3 {
   height: 100%;
   min-width: 0;
   object-fit: cover;
+  background: var(--color-paper-strong);
+}
+
+.product-feature img[src*="2026-product-lines-clean"],
+.product-stack img[src*="2026-product-lines-clean"],
+.system-card > img[src*="2026-product-lines-clean"],
+.system-gallery img[src*="2026-product-lines-clean"],
+.category-band img[src*="2026-product-lines-clean"],
+.category-hero-card img[src*="2026-product-lines-clean"],
+.category-media-grid img[src*="2026-product-lines-clean"],
+.product-page-card > img[src*="2026-product-lines-clean"],
+.supplier-gallery img[src*="2026-product-lines-clean"],
+.mini-product[src*="2026-product-lines-clean"] {
+  object-fit: contain;
+  object-position: center;
+  padding: var(--space-2);
   background: var(--color-paper-strong);
 }
 
@@ -1480,6 +1496,15 @@ textarea:invalid:user-invalid {
   background: var(--color-paper-strong);
 }
 
+.category-hero-card:has(img[src*="2026-product-lines-clean"]) {
+  grid-template-rows: auto auto;
+}
+
+.category-hero-card img[src*="2026-product-lines-clean"] {
+  height: auto;
+  max-height: min(52vh, 460px);
+}
+
 .category-hero-card figcaption {
   padding: var(--space-4);
   color: var(--color-ink-muted);
@@ -1915,6 +1940,10 @@ textarea:invalid:user-invalid {
   height: 54px;
   object-fit: cover;
   border-radius: var(--radius-sm);
+}
+
+.mini-product[src*="2026-product-lines-clean"] {
+  height: 64px;
 }
 
 .supplier-mini-list span {

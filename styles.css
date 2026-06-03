@@ -1976,8 +1976,8 @@ textarea:invalid:user-invalid {
 }
 
 .trust-anchor {
-  background: var(--color-green-950);
-  color: var(--color-cream);
+  background: var(--color-ink);
+  color: var(--color-paper);
   padding: clamp(2.5rem, 5vw, 5rem) 0;
 }
 
@@ -2005,7 +2005,7 @@ textarea:invalid:user-invalid {
 .trust-proof-list li {
   min-height: 8rem;
   border: 1px solid oklch(92% 0.02 110 / 0.22);
-  border-radius: var(--radius-card);
+  border-radius: var(--radius-md);
   padding: var(--space-4);
   background: oklch(100% 0 0 / 0.06);
 }
@@ -2020,7 +2020,7 @@ textarea:invalid:user-invalid {
 
 .requirement-router {
   padding: clamp(2.5rem, 5vw, 5rem) 0;
-  background: var(--color-cream);
+  background: var(--color-paper);
 }
 
 .router-grid {
@@ -2033,10 +2033,10 @@ textarea:invalid:user-invalid {
   display: grid;
   gap: var(--space-3);
   min-height: 100%;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-card);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
   padding: var(--space-4);
-  background: var(--color-surface);
+  background: var(--color-paper-strong);
 }
 
 .router-card h3 {
@@ -2062,7 +2062,7 @@ textarea:invalid:user-invalid {
 }
 
 .category-faq-section {
-  background: var(--color-surface);
+  background: var(--color-panel);
 }
 
 .faq-grid {
@@ -2072,10 +2072,10 @@ textarea:invalid:user-invalid {
 }
 
 .faq-card {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-card);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
   padding: var(--space-4);
-  background: var(--color-cream);
+  background: var(--color-paper-strong);
 }
 
 .faq-card h3 {
@@ -2098,11 +2098,11 @@ textarea:invalid:user-invalid {
 }
 
 .customer-proof-note li {
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-line);
   border-radius: 999px;
   padding: 0.45rem 0.75rem;
-  color: var(--color-green-800);
-  background: var(--color-surface);
+  color: var(--color-accent-dark);
+  background: var(--color-paper-strong);
   font-weight: 600;
 }
 

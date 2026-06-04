@@ -9,6 +9,7 @@ const htmlFiles = readdirSync(root)
   .sort();
 const failures = [];
 const cssFiles = new Set();
+const gaMeasurementId = "G-3XSX6MTW32";
 
 const assetExtensions = new Set([".css", ".js", ".png", ".jpg", ".jpeg", ".webp", ".svg", ".ico", ".ttf"]);
 
@@ -84,6 +85,14 @@ for (const file of htmlFiles) {
     fail(`${file}: contains unfinished editorial marker`);
   }
 
+  if (!html.includes(`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`)) {
+    fail(`${file}: missing GA4 script for ${gaMeasurementId}`);
+  }
+
+  if (!html.includes(`gtag("config", "${gaMeasurementId}")`)) {
+    fail(`${file}: missing GA4 config for ${gaMeasurementId}`);
+  }
+
   for (const match of html.matchAll(/\b(?:src|href)\s*=\s*["']([^"']+)["']/g)) {
     const value = match[1];
 
@@ -132,8 +141,8 @@ for (const file of htmlFiles) {
   if (file !== "thanks.html" && !sitemap.includes(loc)) fail(`sitemap.xml: missing ${loc}`);
 }
 
-if (!sitemap.includes("<lastmod>2026-06-03</lastmod>")) {
-  fail("sitemap.xml: expected updated lastmod date 2026-06-03");
+if (!sitemap.includes("<lastmod>2026-06-04</lastmod>")) {
+  fail("sitemap.xml: expected updated lastmod date 2026-06-04");
 }
 
 if (failures.length) {

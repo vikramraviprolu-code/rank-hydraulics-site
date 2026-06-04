@@ -5,6 +5,16 @@ const mailtoForms = document.querySelectorAll("[data-mail-form]");
 const submitForms = document.querySelectorAll("form[action^='https://formsubmit.co/']");
 const whatsappLinks = document.querySelectorAll("a[href^='https://wa.me/']");
 
+const trackEvent = (eventName, params = {}) => {
+  if (typeof window.gtag !== "function") return;
+
+  window.gtag("event", eventName, {
+    transport_type: "beacon",
+    page_path: window.location.pathname,
+    ...params
+  });
+};
+
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     const isOpen = body.classList.toggle("nav-open");
@@ -37,6 +47,11 @@ submitForms.forEach((form) => {
   form.addEventListener("submit", () => {
     const status = form.querySelector("[data-form-status]");
     if (status) status.textContent = "Sending your enquiry to Rank Hydraulics.";
+
+    trackEvent("generate_lead", {
+      form_id: form.id || "formsubmit_enquiry",
+      form_location: form.querySelector("input[name='source_page']")?.value || document.title
+    });
   });
 });
 
@@ -96,6 +111,52 @@ mailtoForms.forEach((form) => {
     const bodyText = encodeURIComponent(lines.join("\n"));
 
     if (status) status.textContent = "Opening your email app with the enquiry details.";
+    trackEvent("contact_click", {
+      contact_method: "email_form",
+      link_url: `mailto:${target}`
+    });
     window.location.href = `mailto:${target}?subject=${subject}&body=${bodyText}`;
   });
+});
+
+document.addEventListener("click", (event) => {
+  const link = event.target.closest("a[href]");
+  if (!link) return;
+
+  const href = link.getAttribute("href") || "";
+  const linkText = link.textContent.trim().replace(/\s+/g, " ").slice(0, 80);
+
+  if (href.startsWith("https://wa.me/")) {
+    trackEvent("contact_click", {
+      contact_method: "whatsapp",
+      link_text: linkText,
+      link_url: link.href
+    });
+    return;
+  }
+
+  if (href.startsWith("tel:")) {
+    trackEvent("contact_click", {
+      contact_method: "phone",
+      link_text: linkText,
+      link_url: href
+    });
+    return;
+  }
+
+  if (href.startsWith("mailto:")) {
+    trackEvent("contact_click", {
+      contact_method: "email",
+      link_text: linkText,
+      link_url: href
+    });
+    return;
+  }
+
+  if (href.endsWith(".html") || href.includes(".html#")) {
+    trackEvent("site_navigation_click", {
+      link_text: linkText,
+      link_url: link.href
+    });
+  }
 });

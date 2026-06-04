@@ -22,7 +22,7 @@ Additional pages fetched from the same GitHub Pages site:
 - Establishment year: 1994, updated from the 2026 PowerPoint deck. The earlier GitHub Pages source said 1999.
 - Source-published stats: 600+ projects and 1100+ clients.
 - Core capability: registered manufacturer of high-pressure hydraulic hose assemblies.
-- Hose brands/capability stated by source: certified hose assembler for Parker and Gates hoses, plus end-to-end OEM hose connections.
+- Hose brands/capability stated by source: Parker and Gates hose references, plus end-to-end OEM hose connections. Formal certification/authorization wording is deferred until client confirmation.
 - Crimping capability stated by source: up to 4 inch hoses in India and up to 16 inch hoses in Dubai.
 - Branch/network locations stated by source: Kakinada, Hyderabad, Dubai and Frankfurt.
 - Services: hydraulic hose supply, power transmission belts, VMI, tools, lubricants, valves and related industrial supply.

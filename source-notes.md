@@ -56,3 +56,11 @@ Additional pages fetched from the same GitHub Pages site:
 - The source displays `99.5% Customer Satisfaction`; the rebuild does not use it because there is no supporting evidence in the source.
 - The source appointment form points to FormSubmit on the home page and a placeholder script URL on the contact page. The rebuild now posts public enquiry forms through the activated FormSubmit endpoint for `sales@rankhydraulics.com`, with a branded `thanks.html` redirect and phone, email and WhatsApp fallbacks.
 - The latest performance pass adds intrinsic image dimensions, async decoding, lazy loading for below-fold supplier/product imagery, and high-priority eager loading only for hero imagery so pages remain stable as assets load.
+
+## 2026-06-03 buyer utility improvement pass
+
+- Direction approved: trust-led buyer utility pass combining buyer trust, enquiry conversion and search visibility.
+- Peer benchmark patterns considered: Hydroscand hydraulic/product/service pages, PIRTEK urgent service routing, Gates catalogue/resource paths and STAUFF product catalogue grouping.
+- Safe claims used: since 1994, 30+ years, approved customer logo presence, current supplier/product lines, product enquiry guidance and broad sector language.
+- Deferred claims: case studies, formal authorization, delivery timelines, emergency response guarantees, certifications and project outcomes until client-supplied proof arrives.
+- WhatsApp number remains `9849021685` until a dedicated number is provided.

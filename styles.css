@@ -170,13 +170,16 @@ button {
 .brand {
   display: inline-grid;
   align-items: center;
-  width: 226px;
+  width: clamp(176px, 14vw, 198px);
   min-width: 0;
 }
 
 .brand img {
+  display: block;
   width: 100%;
   height: auto;
+  max-height: 86px;
+  object-fit: contain;
 }
 
 .site-menu {
@@ -1333,7 +1336,9 @@ textarea:invalid:user-invalid {
 }
 
 .site-footer img {
-  width: 230px;
+  display: block;
+  width: min(240px, 100%);
+  height: auto;
 }
 
 .site-footer nav {

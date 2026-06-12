@@ -64,3 +64,12 @@ Additional pages fetched from the same GitHub Pages site:
 - Safe claims used: since 1994, 30+ years, approved customer logo presence, current supplier/product lines, product enquiry guidance and broad sector language.
 - Deferred claims: case studies, formal authorization, delivery timelines, emergency response guarantees, certifications and project outcomes until client-supplied proof arrives.
 - WhatsApp number remains `9849021685` until a dedicated number is provided.
+
+## 2026-06-12 SEO pass while project case studies are pending
+
+- Client project descriptions are expected to be unavailable for roughly three months, so this pass does not add new case-study narratives.
+- SEO focus shifted to buyer-intent content: when each product page is the right fit, what details buyers should send, which sectors the requirement commonly maps to and how to route enquiries.
+- Added reusable best-fit and sector-proof sections to the product hub and product-detail pages.
+- Updated selected meta descriptions to reflect plant, project, fleet, repeat-stock and Visakhapatnam relevance without keyword stuffing.
+- Homepage project wording was softened to "project references" and "source material references" where detailed project descriptions are still pending.
+- Public claims still avoid formal supplier authorization, delivery guarantees and project outcomes unless client documentation later confirms them.

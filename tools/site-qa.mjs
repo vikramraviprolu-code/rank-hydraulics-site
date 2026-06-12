@@ -85,6 +85,10 @@ for (const file of htmlFiles) {
     fail(`${file}: contains unfinished editorial marker`);
   }
 
+  if (/\bhref\s*=\s*["'](?:https:\/\/rankhydraulics\.com\/)?index\.html(?:[#"'])/i.test(html)) {
+    fail(`${file}: link points to index.html instead of canonical homepage root`);
+  }
+
   if (!html.includes(`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`)) {
     fail(`${file}: missing GA4 script for ${gaMeasurementId}`);
   }
@@ -141,8 +145,8 @@ for (const file of htmlFiles) {
   if (file !== "thanks.html" && !sitemap.includes(loc)) fail(`sitemap.xml: missing ${loc}`);
 }
 
-if (!sitemap.includes("<lastmod>2026-06-04</lastmod>")) {
-  fail("sitemap.xml: expected updated lastmod date 2026-06-04");
+if (!sitemap.includes("<lastmod>2026-06-12</lastmod>")) {
+  fail("sitemap.xml: expected updated lastmod date 2026-06-12");
 }
 
 if (failures.length) {
